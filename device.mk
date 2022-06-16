@@ -44,6 +44,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-lineage
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(DEVICE_PATH)/overlay/packages/apps/overlays/NoCutoutOverlay
+
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
