@@ -64,6 +64,9 @@ PRODUCT_PACKAGES += \
     fstab.qcom.ramdisk \
     init.device.rc
 
+# Seamless Update
+AB_OTA_UPDATER := false
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
