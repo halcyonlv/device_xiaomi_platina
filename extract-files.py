@@ -27,6 +27,11 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'vendor/lib64/hw/fingerprint.fpc.default.so',
+        'vendor/lib64/hw/fingerprint.goodix.default.so'
+    ): blob_fixup()
+        .fix_soname(),
     'vendor/lib/libMiCameraHal.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
     'vendor/lib/libmmcamera_faceproc.so': blob_fixup()
