@@ -33,6 +33,10 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
         .clear_symbol_version('__gnu_Unwind_Find_exidx'),
+    'vendor/lib/libVDSuperPhotoAPI.so': blob_fixup()
+        .clear_symbol_version('remote_handle_close')
+        .clear_symbol_version('remote_handle_invoke')
+        .clear_symbol_version('remote_handle_open'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
