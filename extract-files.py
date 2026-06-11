@@ -17,6 +17,15 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'hardware/qcom-caf/common/libqti-perfd-client',
+    'hardware/qcom-caf/sdm660',
+    'hardware/qcom-caf/wlan',
+    'hardware/xiaomi',
+    'vendor/qcom/opensource/display',
+    'vendor/xiaomi/sdm660-common',
+]
+
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libMiCameraHal.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
@@ -30,7 +39,6 @@ module = ExtractUtilsModule(
     'platina',
     'xiaomi',
     blob_fixups=blob_fixups,
-    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 
