@@ -1,5 +1,7 @@
 # Not appended blobs from platina-user 10 QKQ1.190910.002 V12.0.3.0.QDTMIXM release-keys
 
+# libmm-qcamera depend on libmmcamera_interface, which is a gnu makefile target
+
 # Audio Power Amplifier
 vendor/firmware/dbmd4_va_fw.bin
 vendor/firmware/tfa98xx_aac.cnt
@@ -18,7 +20,6 @@ vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Camera
-vendor/lib/hw/camera.sdm660.so
 vendor/lib/libMiCameraHal.so
 vendor/lib/libSNPE.so
 vendor/lib/libVDClearShot.so
@@ -34,13 +35,12 @@ vendor/lib/libdepthmapwrapper.so
 vendor/lib/libFaceGrade.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libft2vendor.so
-vendor/lib/libhal_dbg.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmorphohht4.0.so
 vendor/lib/libmibokeh_660.so
-vendor/lib/libmm-qcamera.so
+vendor/lib/libmm-qcamera.so;DISABLE_DEPS
 vendor/lib/libmmcamera_arcsoftbokeh_lib.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_bokeh.so
@@ -74,7 +74,6 @@ vendor/lib/libmmcamera_imx362_gt24c64a.so
 vendor/lib/libmmcamera_imx376.so
 vendor/lib/libmmcamera_imx378.so
 vendor/lib/libmmcamera_imx519.so
-vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_irs1645.so
 vendor/lib/libmmcamera_isp_abf48.so
 vendor/lib/libmmcamera_isp_aec_bg_stats47.so
@@ -209,12 +208,9 @@ vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_lib.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libmmjpeg_interface.so
-vendor/lib/libmmlib2d_interface.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmpbase.so
-vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
@@ -235,8 +231,8 @@ vendor/lib/libmmcamera_platina_imx363_ofilm.so
 vendor/lib/libmmcamera_platina_imx363_sunny.so
 vendor/lib/libmmcamera_platina_imx576_bl24sa64_ofilm_eeprom.so
 vendor/lib/libmmcamera_platina_imx576_gt24p64ba2_sunny_eeprom.so
-vendor/lib/libmmcamera_platina_imx576_ofilm.so|368be94e367f168840375c3ec8a938b2024b14df
-vendor/lib/libmmcamera_platina_imx576_sunny.so|2777a533a9450fa1a2033093c3fd4cb8857c857b
+vendor/lib/libmmcamera_platina_imx576_ofilm.so
+vendor/lib/libmmcamera_platina_imx576_sunny.so
 vendor/lib/libmmcamera_platina_s5k5e8_ofilm.so
 vendor/lib/libmmcamera_platina_s5k5e8_ofilm_eeprom.so
 vendor/lib/libmmcamera_platina_s5k5e8_sunny.so
