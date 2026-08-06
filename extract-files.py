@@ -27,6 +27,8 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/permissions/com.fingerprints.extension.xml': blob_fixup()
+        .regex_replace('/system/framework/', '/system_ext/framework/'),
     (
         'vendor/lib64/hw/fingerprint.fpc.default.so',
         'vendor/lib64/hw/fingerprint.goodix.default.so'
